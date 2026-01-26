@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+  <meta charset="UTF-8">
+  <title>Weight Lifting Simulator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello World!</h1>
-    </div>
+
+<div class="app">
+  <div class="header">
+    <div class="title">Weight Lifting Simulator</div>
+    <div class="rank">Rank <span id="rank">Mortal</span></div>
+  </div>
+
+  <div id="arm">
+    <img id="upperArm" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSUE0_CLQEhtlkQ_9_NC0qyt5QkXsqS7aS8Q&s">
+    <img id="forearm" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgIBCykGonP1TiCh8Hv38l7CRbf11m6b61sQ&s">
+  </div>
+
+  <div id="clicking">LIFT</div>
+
+  <div class="stats">
+    <div>Reps <span id="repNumber">0</span></div>
+    <div>Rebirths <span id="rebirthNumber">0</span></div>
+  </div>
+
+  <div class="actions">
+    <div id="rebirth" class="hidden">REBIRTH</div>
+    <div id="reset">RESET</div>
+  </div>
+</div>
+
+<div id="floaters"></div>
+
 </body>
 </html>
